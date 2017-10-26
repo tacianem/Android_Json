@@ -8,17 +8,23 @@ public class Earthquake {
 
     private double magnitude;
     private String place;
+    private String url;
     private long time;
 
 
-    public Earthquake(double magnitude, String place, long time) {
+    public Earthquake(double magnitude, String place, long time, String url) {
         this.magnitude = magnitude;
         this.place = place;
         this.time = time;
+        this.url = url;
     }
 
     public String getPlace() {
         return place;
+    }
+
+    public String getUrl() {
+        return url;
     }
 
     public long getTime() {
@@ -31,7 +37,7 @@ public class Earthquake {
 
     @Override
     public String toString() {
-        return "Magnitude: "+ magnitude + ", Place: " + place + ", Time: " + time + "\n";
+        return "Magnitude: " + magnitude + "\nPlace: " + place + "\nTime: " + time + "\nUrl: " + url + "\n\n";
     }
 }
 
